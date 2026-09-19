@@ -111,8 +111,7 @@ ul.checks li::before { content: "✓"; position: absolute; left: 0; color: var(-
 .contact strong { font-size: 1.1rem; }
 
 .footer-line {
-  position: absolute;
-  left: 0.6in; right: 0.6in; bottom: 0.5in;
+  margin-top: 1.5rem;
   font-size: 0.9rem;
   color: var(--soft);
   border-top: 1px solid var(--line);
@@ -120,9 +119,10 @@ ul.checks li::before { content: "✓"; position: absolute; left: 0; color: var(-
 }
 
 @media print {
-  body { background: #fff; }
-  .toolbar { display: none; }
-  .sheet { margin: 0; box-shadow: none; width: auto; min-height: auto; padding: 0; }
+  body { background: #fff; font-size: 12.5pt; }
+  .toolbar, .screen-only { display: none !important; }
+  .sheet { margin: 0; box-shadow: none; width: auto; min-height: auto; padding: 0; page-break-inside: avoid; }
   .blank { border-bottom-color: transparent; color: var(--ink); }
-  .footer-line { position: fixed; }
+  h1 { font-size: 2rem; }
+  h2 { margin-top: 1.1rem; }
 }
