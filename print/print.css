@@ -10,7 +10,7 @@
   --line: rgba(35, 32, 27, 0.18);
 }
 
-@page { size: letter; margin: 0.6in; }
+@page { size: letter; margin: 0.5in; }
 
 * { box-sizing: border-box; }
 
@@ -119,10 +119,18 @@ ul.checks li::before { content: "✓"; position: absolute; left: 0; color: var(-
 }
 
 @media print {
-  body { background: #fff; font-size: 12.5pt; }
+  html, body { background: #fff; height: auto; overflow: visible; }
+  body { font-size: 11.5pt; line-height: 1.38; }
   .toolbar, .screen-only { display: none !important; }
-  .sheet { margin: 0; box-shadow: none; width: auto; min-height: auto; padding: 0; page-break-inside: avoid; }
+  .sheet, .sheet.landscape { margin: 0; box-shadow: none; width: auto; min-height: auto; padding: 0; font-size: 11.5pt; }
+  .footer-line { font-size: 0.85rem; margin-top: 0.8rem; }
+  .contact, .rates { break-inside: avoid; }
   .blank { border-bottom-color: transparent; color: var(--ink); }
-  h1 { font-size: 2rem; }
-  h2 { margin-top: 1.1rem; }
+  h1 { font-size: 1.9rem; }
+  h2 { margin-top: 1rem; font-size: 1.35rem; }
+  p { margin-bottom: 0.55rem; }
+  .rates th, .rates td { padding: 0.45rem 0.25rem; }
+  .rates td.price { font-size: 1.25rem; }
+  .contact { margin-top: 0.9rem; }
+  .footer-line { margin-top: 1rem; }
 }

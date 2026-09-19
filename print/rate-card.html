@@ -8,9 +8,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Lora:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="print.css" />
   <style>
-    .sheet { font-size: 14pt; }
-    .rates td.price { font-size: 1.5rem; }
-    .rates th, .rates td { padding: 0.65rem 0.25rem; }
+    @media screen {
+      .sheet { font-size: 14pt; }
+      .rates td.price { font-size: 1.5rem; }
+      .rates th, .rates td { padding: 0.65rem 0.25rem; }
+    }
   </style>
 </head>
 <body>
@@ -48,11 +50,9 @@
   <p class="small soft">Pay with Venmo, Zelle, or a card online through Stripe.</p>
 
   <div class="contact">
-    <strong>Ron · TechHelp</strong><br />
-    <span class="blank" contenteditable="true">phone</span> · hello@techhelp.now · techhelp.now
+    <strong>Ron · TechHelp</strong> · <span class="blank" contenteditable="true">phone</span> · hello@techhelp.now · techhelp.now<br />
+    <span class="small soft">I will never call you out of the blue, ask you to buy anything, or ask for a bank login. If someone does, that’s a scam — hang up.</span>
   </div>
-
-  <p class="footer-line">I will never call you out of the blue, ask you to buy anything, or ask for a bank login. If someone does, that’s a scam — hang up.</p>
 </article>
 
 </body>

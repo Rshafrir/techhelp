@@ -1,27 +1,35 @@
 # Site — techhelp.now
 
-Static one-page card site. Files: `index.html`, `styles.css`.
+Static HTML/CSS. No build step.
 
-## Deploy (Porkbun)
+- `index.html`, `styles.css` — the page
+- `img/ron.jpg` — Ron's photo (missing → monogram fallback shows)
+- `print/` — flyer, rate card, tent card, director one-pager. Open in a browser, click the dotted blanks, print.
 
-Simplest path:
+## Where it runs
 
-1. In Porkbun → techhelp.now → **DNS** / hosting, or upload via **URL Forwarding** only if you temporarily point elsewhere.
-2. Preferred: host on **Cloudflare Pages**, **Netlify**, or **Porkbun site builder** if you use it — upload this `site/` folder.
-3. Point DNS:
-   - `A` / `CNAME` for `@` and `www` to the host (follow host’s docs)
-4. Email: Porkbun → **Email forwarding**: `hello@techhelp.now` → your Gmail (or similar).
+GitHub Pages, repo `Rshafrir/techhelp`, branch `main`, custom domain `techhelp.now` (Porkbun A/AAAA → GitHub; `www` CNAME → `rshafrir.github.io`).
+Email `hello@techhelp.now` forwards via Porkbun to Ron's Gmail.
 
-## Before public
+## Deploy
 
-- [ ] Replace “Add your phone number here” in `index.html` with real number
-- [ ] Add Stripe payment link when created
-- [ ] Confirm `hello@` forwarding works (send a test)
+```bash
+# working clone lives at /tmp/techhelp-site; if missing:
+#   gh repo clone Rshafrir/techhelp /tmp/techhelp-site
+rsync -a --exclude .git --exclude CNAME --exclude .nojekyll --exclude .github site/ /tmp/techhelp-site/
+cd /tmp/techhelp-site && git add -A && git commit -m "Update site" && git push
+```
+
+Live within about a minute. Cache is 10 minutes; add `?v=2` to force a fresh load.
+
+## Before printing anything
+
+- [ ] Phone number: `index.html` (search "hello@techhelp.now" — add the phone beside it) and the `phone` blanks in `print/`
+- [ ] `img/ron.jpg`
+- [ ] Stripe payment link when created
 
 ## Local preview
 
 ```bash
-cd site && python3 -m http.server 8080
+cd site && python3 -m http.server 8080 --bind 127.0.0.1
 ```
-
-Open http://localhost:8080

@@ -11,6 +11,7 @@
     .two { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 0.5rem; }
     .box { padding: 0.9rem 1rem; border: 1px solid var(--line); border-radius: 12px; }
     .box h3 { margin-top: 0; }
+    @media print { .two { gap: 0.75rem; margin-top: 0.25rem; } .box { padding: 0.5rem 0.75rem; } .box ul.checks { margin-bottom: 0; } }
   </style>
 </head>
 <body>
