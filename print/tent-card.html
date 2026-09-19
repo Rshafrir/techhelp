@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TechHelp — table tent card (print)</title>
+  <meta name="robots" content="noindex" />
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Lora:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="print.css" />
+  <style>
+    @page { size: letter landscape; margin: 0.4in; }
+    .sheet.landscape { padding: 0.4in; display: grid; grid-template-rows: 1fr 1fr; }
+    .panel {
+      display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+      padding: 0.5in 0.6in;
+    }
+    .panel.top { transform: rotate(180deg); border-bottom: 1px dashed var(--line); }
+    .panel .logo { font-size: 3.4rem; }
+    .panel h1 { font-size: 2.6rem; margin: 0.25rem 0 0.5rem; }
+    .panel .big { font-size: 1.6rem; margin: 0 0 0.25rem; }
+    .panel .tag { display: inline-block; margin-top: 0.4rem; padding: 0.3rem 1.1rem; border-radius: 999px; background: var(--terracotta); color: #fff; font-weight: 700; font-size: 1.15rem; }
+    .fold-note { text-align: center; font-size: 0.85rem; color: var(--soft); }
+  </style>
+</head>
+<body>
+
+<div class="toolbar" style="max-width:11in"><button onclick="window.print()">Print</button>Landscape letter. Print, fold along the dashed line, stand it on the table. Top half is upside‑down on purpose.</div>
+
+<article class="sheet landscape">
+  <section class="panel top">
+    <p class="logo">Tech<span>Help</span></p>
+    <h1>Free Tech Table</h1>
+    <p class="big">Phones · Tablets · Laptops</p>
+    <p class="big soft">About 10 minutes · No charge · Just sit down</p>
+    <span class="tag">Ask me anything. Even “what is this button?”</span>
+  </section>
+  <section class="panel bottom">
+    <p class="logo">Tech<span>Help</span></p>
+    <h1>Free Tech Table</h1>
+    <p class="big">Phones · Tablets · Laptops</p>
+    <p class="big soft">About 10 minutes · No charge · Just sit down</p>
+    <span class="tag">Ask me anything. Even “what is this button?”</span>
+  </section>
+</article>
+
+<p class="fold-note">Fold here ↑ · techhelp.now</p>
+
+</body>
+</html>
