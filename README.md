@@ -3,7 +3,7 @@
 Static HTML/CSS. No build step.
 
 - `index.html`, `styles.css` — the page
-- `img/ron.jpg` — Ron's photo (missing → monogram fallback shows)
+- `img/tech-table.jpg` (+ `-900` for phones) — hero illustration
 - `print/` — flyer, rate card, tent card, director one-pager. Open in a browser, click the dotted blanks, print.
 
 ## Where it runs
@@ -25,7 +25,6 @@ Live within about a minute. Cache is 10 minutes; add `?v=2` to force a fresh loa
 ## Before printing anything
 
 - [ ] Phone number: `index.html` (search "hello@techhelp.now" — add the phone beside it) and the `phone` blanks in `print/`
-- [ ] `img/ron.jpg`
 - [ ] Stripe payment link when created
 
 ## Local preview
