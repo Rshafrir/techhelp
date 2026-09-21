@@ -3,229 +3,97 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TechHelp — Patient tech help in your clubhouse · Joshua Tree &amp; Yucca Valley</title>
-  <meta name="description" content="Free ten-minute help with phones, tablets, Wi‑Fi, photos and scams at the Tech Table in your 55+ clubhouse. Home visits from $100. Adult children can book for a parent. Joshua Tree / Yucca Valley." />
-  <meta property="og:title" content="TechHelp — patient tech help in your clubhouse" />
-  <meta property="og:description" content="Free Tech Table. Home visits when you need more. Plain English, no rush." />
-  <meta property="og:image" content="https://techhelp.now/img/tech-table.jpg" />
+  <title>TechHelp — Ten minutes free. An hour at home, $100.</title>
+  <meta name="description" content="Ron sets up a free ten-minute tech table in Joshua Tree and Yucca Valley clubhouses. Home visits are $100 the first hour, said up front. Book for a parent at hello@techhelp.now." />
+  <meta property="og:title" content="TechHelp — ten minutes free, then a price you can see" />
+  <meta property="og:description" content="A table in the clubhouse. Phones, photos, FaceTime, Wi-Fi, scams. $100 first hour at home. Joshua Tree and Yucca Valley." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://techhelp.now/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23121212'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia' font-size='18' fill='%23f6f3ec'%3ET%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<header class="topbar">
-  <a class="logo" href="#top">Tech<span>Help</span></a>
-  <nav class="nav" aria-label="Sections">
-    <a href="#help">What I help with</a>
-    <a href="#rates">Rates</a>
-    <a href="#family">For families</a>
-    <a href="#host">For directors</a>
-  </nav>
-  <a class="btn btn-sm" href="mailto:hello@techhelp.now">Email Ron</a>
+<header class="bar">
+  <a class="mark" href="#top">TechHelp</a>
+  <p class="where">Joshua Tree · Yucca Valley</p>
+  <a class="bar-mail" href="mailto:hello@techhelp.now">hello@techhelp.now</a>
 </header>
 
 <main id="top">
-
-  <!-- HERO -->
   <section class="hero">
-    <div class="hero-copy">
-      <p class="eyebrow">Joshua Tree · Yucca Valley</p>
-      <h1>Patient tech help, right in your clubhouse.</h1>
-      <p class="lede">I’m Ron. Phones, tablets, Wi‑Fi, photos, “is this a scam?” — explained slowly, in plain English. Free at the weekly <strong>Tech Table</strong>. Home visits when you need more.</p>
-      <div class="cta-row">
-        <a class="btn" href="mailto:hello@techhelp.now?subject=Tech%20help">Email hello@techhelp.now</a>
-        <a class="btn btn-ghost" href="#rates">See rates</a>
-      </div>
-      <p class="fine">Sons and daughters: <a href="#family">book a visit for a parent</a> from anywhere.</p>
-    </div>
-    <figure class="hero-art">
-      <img src="img/tech-table.jpg" srcset="img/tech-table-900.jpg 900w, img/tech-table.jpg 1152w" sizes="(max-width: 900px) 100vw, 55vw" alt="Illustration: Ron sitting beside a woman at a folding table in a clubhouse, pointing at her phone, Joshua trees through the window" width="1152" height="864" />
-    </figure>
+    <p class="kicker">A table in the clubhouse. Then a visit, if you want one.</p>
+    <h1>Ten minutes, free.<br />An hour at home, $100.<br /><em>Said before we start.</em></h1>
+    <p class="stand">I’m Ron. You bring the phone, the tablet, or the text you don’t trust. Most of it is done in about ten minutes, at a table in your clubhouse, and that part costs nothing. If it needs an hour at your house, the price is already on this page.</p>
+    <p class="cta">
+      <a class="btn" href="mailto:hello@techhelp.now?subject=Tech%20help">Email Ron</a>
+      <a class="quiet" href="#prices">The prices</a>
+    </p>
   </section>
 
-  <!-- FACT STRIP -->
-  <section class="strip" aria-label="At a glance">
-    <div><strong>Free</strong><span>about 10 minutes at the table</span></div>
-    <div><strong>$100</strong><span>home visit, first hour · no travel fee</span></div>
-    <div><strong>You keep</strong><span>your passwords and your accounts</span></div>
-    <div><strong>Family</strong><span>can book and pay from anywhere</span></div>
+  <section class="ledger" id="prices" aria-label="Prices">
+    <div class="row">
+      <span class="what">Tech Table</span>
+      <span class="amt">Free</span>
+      <span class="detail">About ten minutes in the clubhouse. Walk up. No sign-up.</span>
+    </div>
+    <div class="row">
+      <span class="what">Home visit</span>
+      <span class="amt">$100</span>
+      <span class="detail">First hour. Then $70 an hour.</span>
+    </div>
+    <div class="row">
+      <span class="what">Same day</span>
+      <span class="amt">+$25</span>
+      <span class="detail">Added when you need me today.</span>
+    </div>
+    <div class="row">
+      <span class="what">Can’t fix it</span>
+      <span class="amt">$40</span>
+      <span class="detail">Not the full visit. I’ll tell you who can.</span>
+    </div>
+    <div class="row">
+      <span class="what">Phone or video</span>
+      <span class="amt">$30</span>
+      <span class="detail">One call. Or $30 a month for three, after I leave town.</span>
+    </div>
+    <div class="row">
+      <span class="what">Travel</span>
+      <span class="amt">$0</span>
+      <span class="detail">Joshua Tree and Yucca Valley. Farther than that, we agree first.</span>
+    </div>
+    <p class="pay">Venmo, Zelle, or a card online. Someone else can pay.</p>
   </section>
 
-  <!-- WHAT I HELP WITH -->
-  <section id="help" class="section">
-    <div class="section-head">
-      <h2>What I help with</h2>
-      <p>The everyday things. Nothing is too small to ask.</p>
+  <section class="letter" id="letter">
+    <div class="col">
+      <h2>What actually happens</h2>
+      <p>I put a folding table in the clubhouse, same day and time each week. You sit next to me, not across a counter. Texts, photos, FaceTime, Wi‑Fi, a password, a pop-up. Your hands stay on the phone. You leave with a short note of what changed.</p>
+      <p>A new phone, a printer, or “show me one more time” is a home visit. I come to you.</p>
+      <p>I’m here for the season, then in Coachella Valley communities. The $30 calls keep going either way.</p>
     </div>
-    <ul class="help">
-      <li>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 18.5h4"/></svg>
-        <div><strong>iPhone &amp; Android</strong><span>Text too small, ringer off, storage full, mystery pop‑ups.</span></div>
-      </li>
-      <li>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
-        <div><strong>Photos</strong><span>Sending pictures to the grandkids, finding old ones, making room.</span></div>
-      </li>
-      <li>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg>
-        <div><strong>FaceTime &amp; Zoom</strong><span>Answering a video call without hanging up. Joining the family call.</span></div>
-      </li>
-      <li>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 9a15 15 0 0 1 19 0"/><path d="M5.5 12.5a11 11 0 0 1 13 0"/><path d="M8.5 16a6 6 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1" fill="currentColor"/></svg>
-        <div><strong>Wi‑Fi &amp; printer</strong><span>Back online, printer connected, the TV app that quit.</span></div>
-      </li>
-      <li>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="12" r="4.5"/><path d="M12.5 12h9M18 12v3M21 12v2"/></svg>
-        <div><strong>Passwords</strong><span>Back into email or Apple ID, and a simple way to keep them that you control.</span></div>
-      </li>
-      <li>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8 3.5v5.5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4.5"/></svg>
-        <div><strong>Scams</strong><span>Fake calls, texts and pop‑ups. We stop, look, and check together.</span></div>
-      </li>
-    </ul>
-    <p class="not">Not me: cracked screens, data recovery, anything to do with your bank or money apps, caregiving. I teach — I don’t take over.</p>
-  </section>
+    <div class="col">
+      <h2>Booking for someone else</h2>
+      <p>Email me where they live and what’s wrong. I’ll call them to set a time. You can pay from wherever you are, and be on the phone while I’m there.</p>
+      <p><a class="textlink" href="mailto:hello@techhelp.now?subject=Booking%20for%20someone%20else&body=They%20live%20at%3A%20%0AWhat%27s%20wrong%3A%20%0AReach%20me%20at%3A%20%0A">Book for them →</a></p>
 
-  <!-- HOW IT WORKS -->
-  <section class="section section-dark" id="table">
-    <div class="section-head">
-      <h2>How it works</h2>
-      <p>Start free. Go further only if you want to.</p>
-    </div>
-    <ol class="steps">
-      <li>
-        <span class="num">1</span>
-        <h3>Stop by the Tech Table</h3>
-        <p>A folding table in your clubhouse, same day and time every week. Bring the device. About ten minutes, no charge, no sign‑up.</p>
-      </li>
-      <li>
-        <span class="num">2</span>
-        <h3>We fix it together</h3>
-        <p>Your hands on the phone; I point. You’ll remember it next time. You leave with a short note of what we changed.</p>
-      </li>
-      <li>
-        <span class="num">3</span>
-        <h3>Need more? Book me</h3>
-        <p>Bigger job → a home visit at posted rates. After I move on for the season → phone or video, $30 a call.</p>
-      </li>
-    </ol>
-    <p class="fine light">Not at your community yet? <a href="#host">Ask your activity director</a> — it costs them nothing.</p>
-  </section>
-
-  <!-- RATES -->
-  <section id="rates" class="section">
-    <div class="section-head">
-      <h2>Plain rates</h2>
-      <p>No surprises. No travel fee in the Joshua Tree / Yucca Valley area.</p>
-    </div>
-    <div class="rates">
-      <div class="rate">
-        <span class="rate-name">Tech Table</span>
-        <span class="rate-price">Free</span>
-        <p>About ten minutes at the clubhouse table.</p>
-      </div>
-      <div class="rate rate-hi">
-        <span class="rate-name">Home visit</span>
-        <span class="rate-price">$100</span>
-        <p>First hour, then <strong>$70</strong> an hour.<br />Same day: <strong>+$25</strong>.<br />Can’t fix it: you pay <strong>$40</strong>, not the visit.</p>
-      </div>
-      <div class="rate">
-        <span class="rate-name">Phone or video</span>
-        <span class="rate-price">$30</span>
-        <p>Per call — or <strong>$30 a month</strong> for three. Good for after I’ve left town.</p>
-      </div>
-    </div>
-    <p class="fine center">Venmo, Zelle, or a card online (Stripe). Adult children can pay for a parent.</p>
-  </section>
-
-  <!-- FAMILIES -->
-  <section id="family" class="section section-sand">
-    <div class="two">
-      <div>
-        <p class="eyebrow">For sons, daughters and grandkids</p>
-        <h2>Someone patient to sit with your parent and their phone.</h2>
-        <p>You don’t have to walk Mom through FaceTime from three states away, again. I come to her place, sit beside her, and leave things working — with a written note so you both know what changed.</p>
-        <ul class="checks">
-          <li>Book by email from anywhere. I’ll call her to set the time.</li>
-          <li>Pay remotely — card, Venmo or Zelle.</li>
-          <li>Be on speaker or video during the visit if she’d like.</li>
-          <li>I never handle her bank or money apps. I don’t keep her passwords.</li>
-        </ul>
-        <a class="btn" href="mailto:hello@techhelp.now?subject=Booking%20a%20visit%20for%20my%20parent&body=Hi%20Ron%2C%0A%0AMy%20parent%20lives%20at%3A%20%0AWhat%20they%20need%20help%20with%3A%20%0ABest%20way%20to%20reach%20me%3A%20%0A">Book a visit for a parent</a>
-      </div>
-      <blockquote class="quote">
-        <p>“I don’t fix it <em>for</em> them. I sit with them until they can do it themselves — then I write down what we did.”</p>
-        <footer>Ron</footer>
-      </blockquote>
+      <h2>If you run the community</h2>
+      <p>The table costs the community nothing. You give me a table, two chairs, and a line in the newsletter. I fill out the vendor paperwork you actually use. Four weeks. If people don’t show up, we stop.</p>
+      <p><a class="textlink" href="mailto:hello@techhelp.now?subject=A%20table%20at%20our%20community">Ask for the four weeks →</a></p>
     </div>
   </section>
 
-  <!-- DIRECTORS -->
-  <section id="host" class="section">
-    <div class="two">
-      <div>
-        <p class="eyebrow">For activity &amp; resident‑services directors</p>
-        <h2>Host a free weekly Tech Table.</h2>
-        <p>Two hours, same day and time, in your clubhouse or activity room. Residents get patient help. Your staff stops fielding “can you look at my phone?”</p>
-        <ul class="checks">
-          <li><strong>$0 to the community.</strong> A table, two chairs, a line in the newsletter.</li>
-          <li>I complete whatever vendor paperwork you use — insurance, background check, W‑9.</li>
-          <li>Anything past ten minutes, residents book with me directly. It never lands on your team.</li>
-          <li>Four‑week pilot. Keep it if residents show up.</li>
-        </ul>
-        <a class="btn" href="mailto:hello@techhelp.now?subject=Hosting%20a%20Tech%20Table&body=Hi%20Ron%2C%0A%0ACommunity%3A%20%0AMy%20role%3A%20%0AA%20day%2Ftime%20that%20might%20work%3A%20%0A">Set up a pilot</a>
-        <a class="link-more" href="print/director-one-pager.html">One‑page summary to print →</a>
-      </div>
-      <aside class="paste">
-        <p class="paste-kicker">Newsletter blurb — copy and paste</p>
-        <p><strong>Free Tech Table — TechHelp.</strong> Drop in with your phone, tablet or laptop for quick, patient help (about 10 minutes) with texts, photos, FaceTime, Wi‑Fi and spotting scams. <em>[Day] [time] · [Room]</em>. Longer help by appointment. Family welcome to book for a parent. techhelp.now</p>
-      </aside>
-    </div>
+  <section class="wont">
+    <p>I don’t repair screens, open your bank, keep your passwords, or do caregiving. If someone calls you first and says they’re me, hang up.</p>
   </section>
-
-  <!-- PROMISES + FAQ -->
-  <section class="section section-dark" id="trust">
-    <div class="two two-even">
-      <div>
-        <h2>What you can count on</h2>
-        <ul class="promises">
-          <li><strong>You keep your passwords.</strong> I don’t write them down or keep them.</li>
-          <li><strong>I never touch your bank or money apps.</strong> If someone asks you to move money, we stop and check with a person you trust.</li>
-          <li><strong>Your hands on the device.</strong> I point; you do it.</li>
-          <li><strong>A short note when I leave</strong> — what changed, in plain words.</li>
-          <li><strong>Family welcome.</strong> On speaker, on video, or in the room.</li>
-          <li><strong>You can stop anytime.</strong> No hard feelings.</li>
-        </ul>
-      </div>
-      <div>
-        <h2>Questions people ask</h2>
-        <dl class="faq">
-          <dt>What if you can’t fix it?</dt>
-          <dd>At the table, nothing. On a home visit, $40 instead of the full rate — and I’ll tell you who can help.</dd>
-          <dt>Do you fix cracked screens?</dt>
-          <dd>No. That’s a repair shop. I help you use what you have.</dd>
-          <dt>Are you staying in the area?</dt>
-          <dd>For the season, then Coachella Valley communities. Anyone who wants to keep going can, by phone or video.</dd>
-          <dt>Is this a “tech support” line?</dt>
-          <dd>No — one person you’ll meet in your clubhouse. I will never call you first, sell you anything, or ask for a bank login. If someone does, hang up.</dd>
-        </dl>
-      </div>
-    </div>
-  </section>
-
 </main>
 
-<footer class="footer">
-  <div class="footer-inner">
-    <a class="logo" href="#top">Tech<span>Help</span></a>
-    <p class="footer-line"><a href="mailto:hello@techhelp.now">hello@techhelp.now</a> · <a href="https://techhelp.now">techhelp.now</a> · Joshua Tree &amp; Yucca Valley</p>
-    <p class="fine">Patient help with phones, tablets and computers for people in 55+ communities. Not an IT company, not a repair shop, not caregiving.</p>
-    <p class="fine"><a href="print/family-flyer.html">Flyer</a> · <a href="print/rate-card.html">Rate card</a> · <a href="print/director-one-pager.html">For directors</a></p>
-  </div>
+<footer class="foot">
+  <p><strong>TechHelp</strong> · <a href="mailto:hello@techhelp.now">hello@techhelp.now</a> · techhelp.now</p>
+  <p class="prints"><a href="print/family-flyer.html">Flyer</a> · <a href="print/rate-card.html">Rate card</a> · <a href="print/director-one-pager.html">For a community</a></p>
 </footer>
 
 </body>
