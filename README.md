@@ -17,11 +17,11 @@ Print sheets: open in a browser, click a dotted line to type, then use the Print
 
 ## Where it runs
 
-GitHub Pages from `main` (`.github/workflows/pages.yml`), custom domain `techhelp.now` via `CNAME`. Email `hello@techhelp.now` forwards to Ron.
+GitHub Pages from `main` (`.github/workflows/pages.yml`), custom domain `techhelp.now` via `CNAME`. Email Ron at `ron@techhelp.now` (mailbox setup in progress).
 
 ## Before printing or going live
 
-- [ ] Add a phone number beside `hello@techhelp.now` on the home page, the directors page, and the print sheets
+- [ ] Add a phone number beside `ron@techhelp.now` on the home page, the directors page, and the print sheets
 - [ ] Add the Stripe payment link once it exists
 
 ## Local preview
