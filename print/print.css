@@ -1,11 +1,15 @@
-/* Shared printed pieces for Tech Help. Letter paper. */
+/* Shared print pieces for Tech Help — calm practice system */
 
 :root {
-  --ink: #1c140e;
-  --paper: #f3ecdf;
-  --desk: #d9d0c2;
-  --serif: "Spectral", Georgia, "Times New Roman", serif;
-  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --bg: #F4F6F8;
+  --ink: #1A2332;
+  --muted: #4A5568;
+  --accent: #1F4B7A;
+  --accent-hover: #163A5F;
+  --hairline: #D0D7E0;
+  --surface: #FFFFFF;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "Source Sans 3", "Segoe UI", sans-serif;
 }
 
 @page { size: letter; margin: 0.5in; }
@@ -15,48 +19,53 @@
 html, body { margin: 0; padding: 0; }
 
 body {
-  font-family: var(--serif);
+  font-family: var(--sans);
   color: var(--ink);
-  background: var(--desk);
-  font-size: 13pt;
-  line-height: 1.4;
+  background: var(--bg);
+  font-size: 12.5pt;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
 }
 
 .sheet {
   width: 8.5in;
   min-height: 11in;
   margin: 0.45in auto;
-  background: var(--paper);
+  padding: 0.55in 0.6in;
+  background: var(--surface);
   color: var(--ink);
   position: relative;
-  box-shadow: 10px 10px 0 var(--ink);
+  border: 1px solid var(--hairline);
 }
 
 .toolbar {
   max-width: 8.5in;
   margin: 0.45in auto 0;
-  padding: 0.65rem 0.8rem;
-  background: var(--paper);
-  border: 1px solid var(--ink);
-  font-family: var(--mono);
-  font-size: 0.85rem;
-  color: var(--ink);
+  padding: 0.65rem 0.85rem;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  color: var(--muted);
 }
 
 .toolbar button {
   float: right;
   font: inherit;
-  font-weight: 500;
-  color: var(--paper);
-  background: var(--ink);
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
   border: 0;
-  padding: 0.4rem 0.8rem;
+  padding: 0.4rem 0.9rem;
   cursor: pointer;
+  border-radius: 2px;
 }
+
+.toolbar button:hover { background: var(--accent-hover); }
 
 .toolbar button:focus-visible,
 .blank:focus {
-  outline: 3px solid var(--ink);
+  outline: 3px solid var(--accent);
   outline-offset: 2px;
 }
 
@@ -64,86 +73,141 @@ body {
   display: inline-block;
   min-width: 6ch;
   padding: 0 0.2em;
-  border-bottom: 1.5px solid var(--ink);
-  font-family: var(--mono);
-  font-weight: 500;
+  border-bottom: 1.5px solid var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.brand {
+  margin: 0 0 0.35rem;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 .running {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  margin: 0 0 0.8rem;
-  font-family: var(--mono);
-  font-size: 0.78rem;
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 h1 {
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.65rem;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.65rem;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+
+h2 {
+  margin: 1.15rem 0 0.45rem;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+p { margin: 0 0 0.65rem; }
+
+.muted { color: var(--muted); }
+
+.prices {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5rem 0 0.85rem;
+}
+
+.prices th,
+.prices td {
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--hairline);
+  vertical-align: top;
+  text-align: left;
+  font-weight: 400;
+}
+
+.prices th {
+  padding-right: 1rem;
+  width: 58%;
+}
+
+.prices td {
   font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 0.8;
+  text-align: right;
 }
 
-p { margin: 0 0 0.6rem; }
-
-.price-list {
-  list-style: none;
-  margin: 0.4rem 0 0.8rem;
-  padding: 0;
+.prices tr:last-child th,
+.prices tr:last-child td {
+  border-bottom: none;
 }
 
-.price-list li {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.05rem;
-  padding: 0.38rem 0;
-  border-top: 1px solid currentColor;
+.contact {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--hairline);
 }
 
-.price-list b {
-  font-family: var(--mono);
-  font-weight: 500;
-  font-size: 1.35rem;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-}
-
-.price-list b.sentence { font-size: 0.95rem; line-height: 1.3; }
-
-.price-list span { font-size: 0.95rem; }
-
-.kicker {
-  margin: 0 0 0.45rem;
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.footer-line {
+  margin-top: 1rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid var(--hairline);
+  font-size: 0.9rem;
+  color: var(--muted);
 }
 
 @media screen and (max-width: 760px) {
   body { font-size: 18px; }
-  .toolbar, .sheet {
+  .toolbar,
+  .sheet {
     width: auto;
     min-height: 0;
     margin: 0.7rem;
   }
-  .sheet { padding: 1.1rem !important; box-shadow: 6px 6px 0 var(--ink); }
-  .toolbar button { float: none; display: inline-block; margin: 0 0 0.5rem; }
-  .flyer-grid, .sheet.flyer { display: block !important; }
-  .ratecol { margin: 1rem -1.1rem -1.1rem; padding: 1.1rem !important; }
+  .sheet { padding: 1.15rem; }
+  .toolbar button {
+    float: none;
+    display: inline-block;
+    margin: 0 0 0.5rem;
+  }
+  .prices th,
+  .prices td {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  .prices th {
+    padding-bottom: 0.15rem;
+    border-bottom: none;
+  }
+  .prices td {
+    padding-top: 0;
+    border-bottom: 1px solid var(--hairline);
+  }
 }
 
 @media print {
   html, body { background: #fff; }
-  .toolbar, .screen-only { display: none !important; }
+  .toolbar,
+  .screen-only { display: none !important; }
   .sheet {
     width: auto;
     min-height: auto;
     margin: 0;
-    box-shadow: none;
+    border: none;
+    padding: 0;
   }
-  .blank { border-bottom-color: transparent; }
-  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .blank {
+    border-bottom-color: transparent;
+    color: var(--ink);
+  }
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
 }

@@ -2,9 +2,8 @@
 
 Static HTML/CSS. No build step.
 
-- `index.html`, `styles.css` — the page
-- `img/tech-table.jpg` (+ `-900` for phones) — hero illustration
-- `print/` — flyer, rate card, tent card, director one-pager. Open in a browser, click the dotted blanks, print.
+- `index.html`, `styles.css` — quiet single-column practice page
+- `print/` — resident flyer, rate card, tent card, director one-pager. Open in a browser, click the dotted blanks, print.
 
 ## Where it runs
 
