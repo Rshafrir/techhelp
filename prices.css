@@ -1,0 +1,179 @@
+:root {
+  color-scheme: light;
+  --ink: #1a1510;
+  --paper: #f7f3ec;
+  --line: #d9d0c3;
+  --display: "Syne", "Avenir Next", "Segoe UI", sans-serif;
+  --reading: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at top left, rgba(232, 184, 106, 0.18), transparent 42%),
+    linear-gradient(180deg, #fbf8f2 0%, var(--paper) 100%);
+  color: var(--ink);
+  font-family: var(--reading);
+  line-height: 1.45;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem 0;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.mark a,
+.back a {
+  text-decoration: none;
+}
+
+.back a {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  font-weight: 600;
+}
+
+.sheet {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 2.5rem;
+}
+
+h1 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(2.6rem, 8vw, 3.6rem);
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+}
+
+.lede {
+  margin: 0.9rem 0 1.6rem;
+  max-width: 32rem;
+  font-size: 1.2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.05rem;
+}
+
+th,
+td {
+  padding: 0.85rem 0.4rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  font-family: var(--display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+td:last-child,
+th:last-child {
+  text-align: right;
+  white-space: nowrap;
+  font-family: var(--display);
+  font-weight: 700;
+}
+
+.pay,
+.contact {
+  margin: 1.3rem 0 0;
+  max-width: 32rem;
+}
+
+.contact a {
+  font-family: var(--display);
+  font-weight: 700;
+}
+
+.foot {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 0 1.25rem 2rem;
+  font-family: var(--display);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(26, 21, 16, 0.7);
+}
+
+.foot p {
+  margin: 0.35rem 0;
+}
+
+.foot a {
+  text-underline-offset: 0.16em;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 520px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  td {
+    border: 0;
+    padding: 0.1rem 0;
+  }
+
+  td:last-child {
+    text-align: left;
+    margin-top: 0.25rem;
+    font-size: 1.15rem;
+  }
+}
