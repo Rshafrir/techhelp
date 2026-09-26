@@ -2,7 +2,8 @@
 
 Static HTML/CSS. No build step.
 
-- `index.html`, `styles.css` — quiet single-column practice page
+- `index.html`, `styles.css` — full-bleed hero homepage
+- `img/tech-table-hero.jpg` — clubhouse-table hero photo
 - `print/` — resident flyer, rate card, tent card, director one-pager. Open in a browser, click the dotted blanks, print.
 
 ## Where it runs
