@@ -119,6 +119,7 @@ a:hover { color: var(--accent-dark); }
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
+  min-height: 3rem;
   color: var(--ink);
   font-size: 1.65rem;
   font-weight: 700;
@@ -134,7 +135,7 @@ a:hover { color: var(--accent-dark); }
 }
 .wordmark:hover { color: var(--ink); }
 .bar-nav { display: flex; align-items: center; gap: 1.75rem; font-size: 1.15rem; font-weight: 600; }
-.bar-nav a:not(.btn) { color: var(--ink); }
+.bar-nav a:not(.btn) { display: inline-flex; align-items: center; min-height: 3rem; color: var(--ink); }
 .bar-nav a[aria-current="page"] { text-decoration-color: var(--accent); text-decoration-thickness: 3px; }
 
 /* Home: intro */
