@@ -5,13 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TechHelp — rate card (print)</title>
   <meta name="robots" content="noindex" />
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Spectral:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="print.css" />
   <style>
-    @media screen {
-      .sheet { font-size: 14pt; }
-      .rates td.price { font-size: 1.5rem; }
-      .rates th, .rates td { padding: 0.65rem 0.25rem; }
+    .sheet.black {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 0.55in 0.6in;
+    }
+    .sheet.black h1.kicker {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      line-height: 1.35;
+    }
+    .sheet.black .running { color: var(--paper); }
+    .free-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1rem;
+      margin: 0.3in 0 0.15in;
+      padding-bottom: 0.15in;
+      border-bottom: 1px solid rgba(243, 236, 223, 0.4);
+    }
+    .free-line span { max-width: 3.2in; font-family: var(--mono); font-size: 0.85rem; }
+    .free-line strong {
+      font-size: 4.6rem;
+      line-height: 0.8;
+      letter-spacing: -0.045em;
+    }
+    .sheet.black .price-list { margin-top: 0; }
+    .sheet.black .price-list b { font-size: 1.7rem; }
+    .sheet.black .price-list b.sentence { font-size: 1rem; }
+    .foot {
+      margin-top: 0.3in;
+      padding-top: 0.2in;
+      border-top: 1px solid rgba(243, 236, 223, 0.4);
+      font-size: 0.95rem;
+    }
+    .foot .mono { font-family: var(--mono); font-size: 0.8rem; }
+    @media screen and (max-width: 760px) {
+      .free-line { flex-direction: column; align-items: flex-start; }
+      .free-line strong { font-size: 3.4rem; }
     }
   </style>
 </head>
@@ -19,39 +57,30 @@
 
 <div class="toolbar"><button onclick="window.print()">Print</button>Hand this out when the problem is bigger than the table. Fill the <span class="blank">phone</span> blank first.</div>
 
-<article class="sheet">
-  <p class="logo">Tech<span>Help</span></p>
-  <p class="soft" style="margin-top:-0.25rem">In-person tech help for people in 55+ communities</p>
+<article class="sheet black">
+  <p class="running"><span>TechHelp</span><span>techhelp.now</span></p>
+  <h1 class="kicker">You pay only when you want more than the free session</h1>
 
-  <h1 style="margin-top:1.5rem">Prices</h1>
-  <p class="soft">You pay only when you want more than the free Tech Table.</p>
+  <div class="free-line">
+    <span>Tech Table, about 10 minutes in the clubhouse</span>
+    <strong>Free</strong>
+  </div>
 
-  <table class="rates">
-    <tr><th>Tech Table, about 10 minutes in the clubhouse</th><td class="price">Free</td><td>Walk up and sit down.</td></tr>
-    <tr><th>Home visit, first hour</th><td class="price">$100</td><td>Then <strong>$70</strong> each hour after that.</td></tr>
-    <tr><th>Same-day home visit</th><td class="price">+$25</td><td>Extra.</td></tr>
-    <tr><th>Home visit that cannot be solved</th><td class="price">$40</td><td>Not the full visit.</td></tr>
-    <tr><th>Phone or video call</th><td class="price">$30</td><td></td></tr>
-    <tr><th>Monthly plan</th><td class="price">$30/mo</td><td>3 calls. Extra calls $30 each.</td></tr>
-  </table>
-
-  <p>Anything that can be finished in about 10 minutes at the table is free. Anything longer is paid.</p>
-
-  <p><strong>I help with:</strong> phones, Zoom and FaceTime, photos, Wi‑Fi, passwords, and spotting scams.</p>
-  <p><strong>Not me:</strong> cracked screens or lost files, bank accounts or money apps, keeping your passwords, caregiving.</p>
-
-  <h2>What you can count on</h2>
-  <ul class="checks">
-    <li>You keep your passwords. I don’t write them down or keep them.</li>
-    <li>I don’t log in to bank accounts or money apps.</li>
-    <li>I don’t call you out of the blue. If someone calls, says they are TechHelp, and asks for money or a password, hang up.</li>
+  <ul class="price-list">
+    <li><b>$100</b><span>Home visit, first hour</span></li>
+    <li><b>$70</b><span>Each hour after that</span></li>
+    <li><b>$25 extra</b><span>Same-day home visit</span></li>
+    <li><b class="sentence">$40, not the full visit</b><span>Home visit that cannot be solved</span></li>
+    <li><b>$30</b><span>Phone or video call</span></li>
+    <li><b class="sentence">$30 a month for 3 calls. Extra calls are $30 each.</b><span>Monthly plan</span></li>
   </ul>
 
-  <p class="small">Venmo or Zelle in person. Card online through Stripe.</p>
-
-  <div class="contact">
-    <strong>Ron · TechHelp</strong> · <span class="blank" contenteditable="true">phone</span> · hello@techhelp.now · techhelp.now<br />
-    <span class="small soft">Email me. Say where you live and what you need help with. I will write back to set a time.</span>
+  <div class="foot">
+    <p>Anything that can be finished in about 10 minutes at the table is free. Anything longer is paid.</p>
+    <p>I help with phones, Zoom and FaceTime, photos, Wi‑Fi, passwords, and spotting scams.</p>
+    <p class="mono">Venmo or Zelle in person. Card online through Stripe.</p>
+    <p><strong>Ron · TechHelp</strong> · <span class="blank" contenteditable="true">phone</span> · hello@techhelp.now</p>
+    <p class="mono">Email me. Say where you live and what you need help with. I will write back to set a time.</p>
   </div>
 </article>
 

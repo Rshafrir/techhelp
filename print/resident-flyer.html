@@ -5,42 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TechHelp — flyer (print)</title>
   <meta name="robots" content="noindex" />
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Spectral:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="print.css" />
+  <style>
+    .sheet.flyer {
+      display: grid;
+      grid-template-columns: 1.15fr 0.95fr;
+      padding: 0;
+      min-height: 11in;
+    }
+    .flyer-letter { padding: 0.48in 0.42in 0.45in 0.5in; }
+    .flyer-letter h1 { font-size: 4.4rem; margin-top: 0.35rem; }
+    .ratecol {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 0.48in 0.38in 0.45in;
+    }
+    .ratecol .price-list li { border-top-color: rgba(243, 236, 223, 0.35); }
+    .when { margin-top: 0.8rem; }
+    .sign {
+      margin-top: 1rem;
+      padding-top: 0.45rem;
+      border-top: 1px solid var(--ink);
+      font-family: var(--mono);
+      font-size: 0.85rem;
+    }
+    @media print {
+      .sheet.flyer { min-height: 10in; }
+      .flyer-letter h1 { font-size: 3.4rem; }
+    }
+  </style>
 </head>
 <body>
 
 <div class="toolbar"><button onclick="window.print()">Print</button>Click any <span class="blank">dotted blank</span> to type, then print. One letter page.</div>
 
-<article class="sheet">
-  <p class="logo">Tech<span>Help</span></p>
-
-  <h1 style="margin-top:1rem">Help with your phone, tablet, or computer.</h1>
-
-  <p>I’m Ron. I give in-person tech help to people who live in 55+ communities. I show up where you already gather and help with ordinary problems: phones, Zoom and FaceTime, photos, Wi‑Fi, passwords, and spotting scams.</p>
-
-  <h2>Free: the Tech Table</h2>
-  <p>A free drop-in table at <span class="blank" contenteditable="true">community name</span>, <span class="blank" contenteditable="true">day</span> at <span class="blank" contenteditable="true">time</span>. About 10 minutes in the clubhouse is free. You do not have to sign up.</p>
-
-  <h2>When you want more</h2>
-  <p>You pay only when you want more than the free session. Book a home visit, or a phone or video call.</p>
-  <table class="rates">
-    <tr><th>Tech Table, about 10 minutes</th><td class="price">Free</td><td>in the clubhouse</td></tr>
-    <tr><th>Home visit, first hour</th><td class="price">$100</td><td>then <strong>$70</strong> each hour after that</td></tr>
-    <tr><th>Same-day home visit</th><td class="price">+$25</td><td>extra</td></tr>
-    <tr><th>Home visit that cannot be solved</th><td class="price">$40</td><td>not the full visit</td></tr>
-    <tr><th>Phone or video call</th><td class="price">$30</td><td></td></tr>
-    <tr><th>Monthly plan</th><td class="price">$30</td><td>a month for 3 calls. Extra calls $30 each.</td></tr>
-  </table>
-  <p class="small">Anything that can be finished in about 10 minutes at the table is free. Anything longer is paid.</p>
-  <p class="small">Venmo or Zelle in person. Card online through Stripe.</p>
-
-  <div class="contact">
-    <strong>Book with me:</strong> <span class="blank" contenteditable="true">phone</span> · hello@techhelp.now · techhelp.now<br />
-    <span class="small soft">Email works best. Say where you live and what you need help with. I will write back to set a time.</span>
+<article class="sheet flyer">
+  <div class="flyer-letter">
+    <p class="running"><span>TechHelp</span><span>techhelp.now</span></p>
+    <h1>Sit<br>down.</h1>
+    <p>I’m Ron. I give in-person tech help to people who live in 55+ communities. I show up where you already gather and help with ordinary problems: phones, Zoom and FaceTime, photos, Wi‑Fi, passwords, and spotting scams.</p>
+    <p>The free session in the clubhouse is the Tech Table. About 10 minutes at <span class="blank" contenteditable="true">community name</span>, <span class="blank" contenteditable="true">day</span> at <span class="blank" contenteditable="true">time</span>, is free. You do not have to sign up.</p>
+    <p>If you want more than that, you can book a home visit or a phone or video call. You pay only when you want more than the free session. The community pays nothing.</p>
+    <p class="sign">
+      <strong>Book with me:</strong> <span class="blank" contenteditable="true">phone</span> · hello@techhelp.now<br />
+      Say where you live and what you need help with. I will write back to set a time.
+    </p>
   </div>
-
-  <p class="footer-line">TechHelp · techhelp.now · hello@techhelp.now · In-person tech help for people in 55+ communities.</p>
+  <aside class="ratecol">
+    <p class="kicker">Tech Table</p>
+    <p style="font-size:3.2rem;font-weight:700;line-height:0.85;letter-spacing:-0.04em;margin:0 0 0.2rem">Free</p>
+    <p style="font-family:var(--mono);font-size:0.8rem;margin:0 0 0.9rem">About 10 minutes in the clubhouse</p>
+    <p class="kicker">Anything longer is paid</p>
+    <ul class="price-list">
+      <li><b>$100</b><span>Home visit, first hour</span></li>
+      <li><b>$70</b><span>Each hour after that</span></li>
+      <li><b>$25 extra</b><span>Same-day home visit</span></li>
+      <li><b class="sentence">$40, not the full visit</b><span>Home visit that cannot be solved</span></li>
+      <li><b>$30</b><span>Phone or video call</span></li>
+      <li><b class="sentence">$30 a month for 3 calls. Extra calls are $30 each.</b><span>Monthly plan</span></li>
+    </ul>
+    <p style="font-size:0.92rem">Anything that can be finished in about 10 minutes at the table is free. Anything longer is paid.</p>
+    <p style="font-family:var(--mono);font-size:0.78rem">Venmo or Zelle in person. Card online through Stripe.</p>
+  </aside>
 </article>
 
 </body>
