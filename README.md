@@ -2,8 +2,9 @@
 
 Static HTML/CSS. No build step.
 
-- `index.html`, `styles.css` — the page
-- `img/tech-table.jpg` (+ `-900` for phones) — hero illustration
+- `index.html`, `home.css` — one-viewport home (brand, one line, email CTA)
+- `prices.html`, `prices.css` — full price list
+- `img/tech-table-hero.jpg` — clubhouse / phone-in-hands photo
 - `print/` — flyer, rate card, tent card, director one-pager. Open in a browser, click the dotted blanks, print.
 
 ## Where it runs
@@ -13,22 +14,15 @@ Email `hello@techhelp.now` forwards via Porkbun to Ron's Gmail.
 
 ## Deploy
 
-```bash
-# working clone lives at /tmp/techhelp-site; if missing:
-#   gh repo clone Rshafrir/techhelp /tmp/techhelp-site
-rsync -a --exclude .git --exclude CNAME --exclude .nojekyll --exclude .github site/ /tmp/techhelp-site/
-cd /tmp/techhelp-site && git add -A && git commit -m "Update site" && git push
-```
-
-Live within about a minute. Cache is 10 minutes; add `?v=2` to force a fresh load.
+Push to `main`. The Pages workflow deploys the repo root. Live within about a minute. Cache is about 10 minutes; add `?v=2` to force a fresh load.
 
 ## Before printing anything
 
-- [ ] Phone number: `index.html` (search "hello@techhelp.now" — add the phone beside it) and the `phone` blanks in `print/`
+- [ ] Phone number: add beside `hello@techhelp.now` on the print blanks in `print/`
 - [ ] Stripe payment link when created
 
 ## Local preview
 
 ```bash
-cd site && python3 -m http.server 8080 --bind 127.0.0.1
+python3 -m http.server 8080 --bind 127.0.0.1
 ```

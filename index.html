@@ -3,67 +3,50 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tech Help — phone, tablet, and computer help</title>
-  <meta name="description" content="Ron helps people who live in 55+ communities with phones, Zoom and FaceTime, photos, Wi-Fi, passwords, and spotting scams. The Tech Table in the clubhouse is free. A home visit is $100 for the first hour. A phone or video call is $30. Email hello@techhelp.now." />
-  <meta property="og:title" content="Tech Help — phone, tablet, and computer help" />
-  <meta property="og:description" content="Free Tech Table in the clubhouse, about 10 minutes. Home visits $100 the first hour. Phone or video calls $30." />
+  <title>Tech Help</title>
+  <meta name="description" content="In-person tech help for people who live in 55+ communities. Email hello@techhelp.now." />
+  <meta property="og:title" content="Tech Help" />
+  <meta property="og:description" content="In-person tech help for people who live in 55+ communities. Email hello@techhelp.now." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://techhelp.now/" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c140e'/%3E%3Ctext x='6' y='23' font-family='Georgia' font-size='18' fill='%23f3ecdf'%3ET%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231A1510'/%3E%3Ctext x='5' y='23' font-family='Georgia' font-size='18' fill='%23F6EFE4'%3ET%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Spectral:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="home.css" />
 </head>
 <body>
-  <section class="letter">
-    <header class="mast">
-      <p class="brand">Tech Help</p>
-      <p class="mast-link"><a href="mailto:hello@techhelp.now">hello@techhelp.now</a></p>
-    </header>
-
-    <div class="poster">
-      <h1>Sit<br>down.</h1>
-      <p class="free-block">
-        <span>Tech Table, about 10 minutes in the clubhouse</span>
-        <strong>Free</strong>
+  <main class="stage">
+    <img
+      class="stage-photo"
+      src="img/tech-table-hero.jpg"
+      alt="Hands holding a phone at a wooden clubhouse table"
+      width="1280"
+      height="720"
+      fetchpriority="high"
+    />
+    <div class="stage-veil" aria-hidden="true"></div>
+    <div class="stage-copy">
+      <h1 class="brand">Tech Help</h1>
+      <p class="support">Patient, in-person help with phones and computers for people who live in 55+ communities.</p>
+      <p class="cta-row">
+        <a class="cta" href="mailto:hello@techhelp.now?subject=Tech%20Help">Email hello@techhelp.now</a>
       </p>
     </div>
+  </main>
 
-    <div class="prose">
-      <p class="open">I’m Ron. I give in-person tech help to people who live in 55+ communities. I show up where you already gather and help with ordinary problems: phones, Zoom and FaceTime, photos, Wi‑Fi, passwords, and spotting scams.</p>
-
-      <p>The free session in the clubhouse is the Tech Table. If you want more than that, you can book a home visit or a phone or video call.</p>
-
-      <p><a class="write" href="mailto:hello@techhelp.now?subject=Help%20with%20a%20phone%2C%20tablet%2C%20or%20computer">Email hello@techhelp.now</a></p>
-
-      <p>Say where you live and what you need help with. I will write back to set a time.</p>
-    </div>
-
-    <aside class="ps">
-      <p class="kicker">For the activity director</p>
-      <p>Residents book with me directly, at the prices on this page, so it does not become work for your staff.</p>
-      <p><a href="mailto:hello@techhelp.now?subject=Tech%20Table%20at%20our%20community">Email me about hosting a Tech Table</a></p>
-    </aside>
-
-    <footer>
-      <p>Tech Help · <a href="mailto:hello@techhelp.now">hello@techhelp.now</a> · techhelp.now</p>
-      <p><a href="print/resident-flyer.html">Flyer</a> · <a href="print/rate-card.html">Price list</a> · <a href="print/director-one-pager.html">Page for activity directors</a></p>
-    </footer>
-  </section>
-
-  <section class="rate-sheet" aria-label="Prices">
-    <p class="kicker">Anything longer is paid</p>
-    <ol>
-      <li><b>$100</b><span>Home visit, first hour</span></li>
-      <li><b>$70</b><span>Each hour after that</span></li>
-      <li><b>$25 extra</b><span>Same-day home visit</span></li>
-      <li><b class="sentence">$40, not the full visit</b><span>Home visit that cannot be solved</span></li>
-      <li><b>$30</b><span>Phone or video call</span></li>
-      <li><b class="sentence">$30 a month for 3 calls. Extra calls are $30 each.</b><span>Monthly plan</span></li>
-    </ol>
-    <p class="rule-line">Anything that can be finished in about 10 minutes at the table is free. Anything longer is paid.</p>
-    <p class="pay-line">Venmo or Zelle in person. Card online through Stripe.</p>
-  </section>
+  <footer class="quiet">
+    <p>
+      <a href="prices.html">Prices</a>
+      ·
+      <a href="print/resident-flyer.html">Flyer</a>
+      ·
+      <a href="print/rate-card.html">Rate card</a>
+      ·
+      <a href="print/tent-card.html">Tent card</a>
+      ·
+      <a href="print/director-one-pager.html">Directors</a>
+    </p>
+  </footer>
 </body>
 </html>
