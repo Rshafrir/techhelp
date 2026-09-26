@@ -1,34 +1,31 @@
-# Site — techhelp.now
+# Tech Help · techhelp.now
 
-Static HTML/CSS. No build step.
+Static HTML and CSS. No build step.
 
-- `index.html`, `styles.css` — the page
-- `img/tech-table.jpg` (+ `-900` for phones) — hero illustration
-- `print/` — flyer, rate card, tent card, director one-pager. Open in a browser, click the dotted blanks, print.
+| Path | What it is |
+| --- | --- |
+| `index.html` | Home page for residents: the three ways to get help, what people bring, how to reach Ron |
+| `directors/index.html` | Page for activity directors deciding whether to host a Tech Table |
+| `assets/site.css` | Shared tokens, type, and components for every page and print sheet |
+| `assets/icons.svg` | Icon sprite, used with `<use href="assets/icons.svg#name">` |
+| `print/flyer.html` | Letter flyer for the bulletin board, with day, time, and room blanks |
+| `print/tent-card.html` | Letter sheet that folds into a two-sided table card |
+| `print/prices.html` | Two half-sheet price lists on one landscape Letter page |
+| `print/director.html` | One-page leave-behind for an activity director |
+
+Print sheets: open in a browser, click a dotted line to type, then use the Print button. Pages are sized for US Letter with no margins.
 
 ## Where it runs
 
-GitHub Pages, repo `Rshafrir/techhelp`, branch `main`, custom domain `techhelp.now` (Porkbun A/AAAA → GitHub; `www` CNAME → `rshafrir.github.io`).
-Email `hello@techhelp.now` forwards via Porkbun to Ron's Gmail.
+GitHub Pages from `main` (`.github/workflows/pages.yml`), custom domain `techhelp.now` via `CNAME`. Email `hello@techhelp.now` forwards to Ron.
 
-## Deploy
+## Before printing or going live
 
-```bash
-# working clone lives at /tmp/techhelp-site; if missing:
-#   gh repo clone Rshafrir/techhelp /tmp/techhelp-site
-rsync -a --exclude .git --exclude CNAME --exclude .nojekyll --exclude .github site/ /tmp/techhelp-site/
-cd /tmp/techhelp-site && git add -A && git commit -m "Update site" && git push
-```
-
-Live within about a minute. Cache is 10 minutes; add `?v=2` to force a fresh load.
-
-## Before printing anything
-
-- [ ] Phone number: `index.html` (search "hello@techhelp.now" — add the phone beside it) and the `phone` blanks in `print/`
-- [ ] Stripe payment link when created
+- [ ] Add a phone number beside `hello@techhelp.now` on the home page, the directors page, and the print sheets
+- [ ] Add the Stripe payment link once it exists
 
 ## Local preview
 
 ```bash
-cd site && python3 -m http.server 8080 --bind 127.0.0.1
+python3 -m http.server 8080 --bind 127.0.0.1
 ```

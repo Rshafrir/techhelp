@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tech Help · Price list</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="print.css">
+  <style>
+    @page { size: letter landscape; margin: 0; }
+
+    .sheet.two-up { display: grid; grid-template-columns: 1fr 1fr; padding: 0; }
+    .card { position: relative; display: flex; flex-direction: column; padding: 0.45in 0.5in 0.42in; }
+    .card + .card { border-left: 1.5px dashed var(--line); }
+    .card h1 { margin-top: 0.22in; font-size: 28pt; line-height: 1.1; letter-spacing: -0.015em; }
+    .card .rows { margin-top: 0.16in; font-size: 12.5pt; }
+    .card .rows li { padding-block: 0.07in; }
+    .card .rows .group { padding-top: 0.14in; border-top: 0; font-weight: 700; color: var(--accent); }
+    .card .rows .group + li { border-top: 2px solid var(--ink); }
+    .card .rows .free b { color: var(--accent); }
+    .card .rule { margin-top: 0.16in; font-size: 12.5pt; }
+    .card .pay { display: flex; gap: 0.12in; align-items: flex-start; margin-top: 0.16in; font-size: 12.5pt; }
+    .card .pay .icon { width: 0.3in; height: 0.3in; color: var(--accent); }
+    .card .contact {
+      display: flex;
+      justify-content: space-between;
+      margin-top: auto;
+      padding-top: 0.12in;
+      border-top: 2px solid var(--ink);
+      font-size: 13pt;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <a class="wordmark" href="../">Tech Help</a>
+    <p>Two copies on one sheet. Print, then cut along the dashed line.</p>
+    <button class="btn btn-small" type="button" onclick="window.print()">Print</button>
+  </div>
+
+  <article class="sheet landscape two-up">
+    <template id="price-card">
+      <p class="running"><span class="wordmark">Tech Help</span><span>techhelp.now</span></p>
+      <h1>Prices</h1>
+      <ul class="rows">
+        <li class="free"><span>Tech Table, about 10 minutes in the clubhouse</span> <b>Free</b></li>
+        <li class="group">Calls</li>
+        <li><span>Phone or video call</span> <b>$30</b></li>
+        <li><span>Monthly plan, 3 calls</span> <b>$30 a month</b></li>
+        <li><span>Extra calls on the plan</span> <b>$30 each</b></li>
+        <li class="group">Home visits</li>
+        <li><span>First hour</span> <b>$100</b></li>
+        <li><span>Each hour after that</span> <b>$70</b></li>
+        <li><span>Same day</span> <b>$25 extra</b></li>
+        <li><span>If it can’t be solved</span> <b>$40, not the full visit</b></li>
+      </ul>
+      <p class="rule">Anything that can be finished in about 10 minutes at the table is free. Anything longer is paid.</p>
+      <p class="pay"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#card"/></svg><span>Venmo or Zelle in person. Card online through Stripe.</span></p>
+      <p class="contact"><span>hello@techhelp.now</span><span>techhelp.now</span></p>
+    </template>
+    <section class="card"></section>
+    <section class="card" aria-hidden="true"></section>
+  </article>
+
+  <script>
+    const tpl = document.getElementById('price-card');
+    document.querySelectorAll('.card').forEach((card) => card.append(tpl.content.cloneNode(true)));
+  </script>
+</body>
+</html>

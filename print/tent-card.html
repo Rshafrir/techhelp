@@ -1,79 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tech Help — table tent card (print)</title>
-  <meta name="robots" content="noindex" />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Spectral:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="print.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tech Help · Table card</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="print.css">
   <style>
-    @page { size: letter landscape; margin: 0.4in; }
-    .sheet.landscape {
-      width: 11in;
-      min-height: 8.5in;
-      padding: 0;
-      display: grid;
-      grid-template-rows: 1fr 1fr;
-    }
+    @page { size: letter portrait; margin: 0; }
+
+    .sheet.tent { padding: 0; }
     .panel {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 5.5in;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      padding: 0.6in 0.7in 0.55in;
+    }
+    .panel.top { top: 0; transform: rotate(180deg); }
+    .panel.bottom { top: 5.5in; }
+    .fold {
+      position: absolute;
+      top: 5.5in;
+      left: 0;
+      right: 0;
+      border-top: 1.5px dashed var(--line);
+    }
+    .fold span {
+      position: absolute;
+      right: 0.3in;
+      top: -0.12in;
+      padding: 0 0.08in;
+      background: var(--white);
+      color: #7d8b87;
+      font-size: 9pt;
+    }
+    .panel .kicker { display: flex; align-items: center; gap: 0.14in; font-size: 17pt; font-weight: 700; color: var(--accent); }
+    .panel .kicker .icon { width: 0.5in; height: 0.5in; }
+    .panel h1 { margin-top: 0.12in; font-size: 72pt; line-height: 1; letter-spacing: -0.02em; }
+    .panel .free { margin-top: 0.18in; font-size: 26pt; font-weight: 700; }
+    .panel .bring { margin-top: 0.08in; font-size: 17pt; color: var(--ink-2); }
+    .panel .base {
+      display: flex;
       justify-content: space-between;
-      text-align: left;
-      padding: 0.38in 0.5in 0.32in;
-      overflow: hidden;
+      margin-top: auto;
+      padding-top: 0.12in;
+      border-top: 2px solid var(--ink);
+      font-size: 14pt;
+      font-weight: 700;
     }
-    .panel.top {
-      transform: rotate(180deg);
-      border-bottom: 1px dashed var(--ink);
-    }
-    .who {
-      margin: 0;
-      font-family: var(--mono);
-      font-size: 0.85rem;
-    }
-    .panel h1 {
-      margin: 0.15in 0 0;
-      font-size: 4.8rem;
-      line-height: 0.76;
-    }
-    .meta {
-      margin: 0;
-      font-family: var(--mono);
-      font-size: 1rem;
-    }
-    .fold-note { font-family: var(--mono); font-size: 0.8rem; text-align: left; max-width: 11in; margin: 0.3rem auto 1rem; }
-    @media print {
-      .sheet.landscape { width: auto; min-height: auto; height: 7.2in; }
-      .panel h1 { font-size: 4rem; }
-    }
-    @media screen and (max-width: 760px) {
-      .sheet.landscape { width: auto; min-height: 0; display: block; }
-      .panel { min-height: 70vh; }
-      .panel h1 { font-size: 4rem; }
-    }
+    @media print { .fold span { display: none; } }
   </style>
 </head>
 <body>
+  <div class="toolbar">
+    <a class="wordmark" href="../">Tech Help</a>
+    <p>Print on card stock, fold along the dashed line, and stand it on the table. Both sides read the right way up.</p>
+    <button class="btn btn-small" type="button" onclick="window.print()">Print</button>
+  </div>
 
-<div class="toolbar" style="max-width:11in"><button onclick="window.print()">Print</button>Landscape letter. Print, fold along the dashed line, stand it on the table. Top half is upside‑down on purpose.</div>
+  <article class="sheet tent">
+    <div class="panel top" aria-hidden="true">
+      <p class="kicker"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#table"/></svg>Tech Help</p>
+      <h1>Tech Table</h1>
+      <p class="free">Free, about 10 minutes</p>
+      <p class="bring">Bring your phone, tablet, or computer and your question.</p>
+      <p class="base"><span>Longer help: techhelp.now</span><span>hello@techhelp.now</span></p>
+    </div>
 
-<article class="sheet landscape">
-  <section class="panel top">
-    <p class="who">Tech Help</p>
-    <h1>Sit<br>down.</h1>
-    <p class="meta">About 10 minutes in the clubhouse. Free.</p>
-  </section>
-  <section class="panel bottom">
-    <p class="who">Tech Help</p>
-    <h1>Sit<br>down.</h1>
-    <p class="meta">About 10 minutes in the clubhouse. Free.</p>
-  </section>
-</article>
+    <div class="fold"><span>Fold here</span></div>
 
-<p class="fold-note screen-only">Fold along the dashed line · techhelp.now</p>
-
+    <div class="panel bottom">
+      <p class="kicker"><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#table"/></svg>Tech Help</p>
+      <h1>Tech Table</h1>
+      <p class="free">Free, about 10 minutes</p>
+      <p class="bring">Bring your phone, tablet, or computer and your question.</p>
+      <p class="base"><span>Longer help: techhelp.now</span><span>hello@techhelp.now</span></p>
+    </div>
+  </article>
 </body>
 </html>

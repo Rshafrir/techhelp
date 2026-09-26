@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tech Help · Flyer</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="print.css">
+  <style>
+    @page { size: letter portrait; margin: 0; }
+
+    .flyer-top {
+      margin-top: 0.3in;
+      padding: 0.34in 0.45in 0.36in;
+      border-radius: 0.2in;
+      background: var(--tint);
+    }
+    .flyer-top .where { font-size: 15pt; font-weight: 700; color: var(--accent); }
+    .flyer-top h1 { margin-top: 0.04in; font-size: 60pt; line-height: 1; letter-spacing: -0.02em; }
+    .flyer-top .free { margin-top: 0.14in; font-size: 23pt; font-weight: 700; line-height: 1.2; }
+    .flyer-top .sub { margin-top: 0.1in; font-size: 15pt; color: var(--ink-2); }
+
+    .when { display: grid; grid-template-columns: auto 1fr; gap: 0.12in 0.25in; margin-top: 0.24in; font-size: 16pt; align-items: baseline; }
+    .when dt { font-weight: 700; }
+    .when dd { margin: 0; }
+    .when .fill { width: 100%; background: var(--white); }
+
+    .flyer-topics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.2in 0.3in; margin-top: 0.32in; }
+    .flyer-topics li { display: flex; align-items: center; gap: 0.12in; font-size: 14pt; font-weight: 700; }
+
+    .longer { margin-top: 0.32in; margin-bottom: 0.25in; }
+    .longer h2 { font-size: 15pt; }
+    .longer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.22in; margin-top: 0.12in; }
+    .longer-grid div { padding: 0.18in 0.22in; border: 2px solid var(--line); border-radius: 0.14in; }
+    .longer-grid b { display: block; font-size: 28pt; line-height: 1.1; }
+    .longer-grid span { font-size: 13pt; color: var(--ink-2); }
+    .longer p { margin-top: 0.14in; font-size: 13pt; }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <a class="wordmark" href="../">Tech Help</a>
+    <p>Click the dotted lines to type the day, time, and room. Leave them blank to write by hand.</p>
+    <button class="btn btn-small" type="button" onclick="window.print()">Print</button>
+  </div>
+
+  <article class="sheet flow">
+    <p class="running"><span class="wordmark">Tech Help</span><span>techhelp.now</span></p>
+
+    <div class="flyer-top">
+      <p class="where">In the clubhouse</p>
+      <h1>Tech Table</h1>
+      <p class="free">Free help with your phone, tablet, or computer.</p>
+      <p class="sub">About 10 minutes each. Bring your device and your question.</p>
+      <dl class="when">
+        <dt>Day</dt><dd><span class="fill" contenteditable="true" data-hint="Type the day"></span></dd>
+        <dt>Time</dt><dd><span class="fill" contenteditable="true" data-hint="Type the time"></span></dd>
+        <dt>Room</dt><dd><span class="fill" contenteditable="true" data-hint="Type the room"></span></dd>
+      </dl>
+    </div>
+
+    <ul class="flyer-topics">
+      <li><svg class="icon icon-lg" aria-hidden="true"><use href="../assets/icons.svg#phone"/></svg>Phones and tablets</li>
+      <li><svg class="icon icon-lg" aria-hidden="true"><use href="../assets/icons.svg#video"/></svg>Zoom and FaceTime</li>
+      <li><svg class="icon icon-lg" aria-hidden="true"><use href="../assets/icons.svg#photo"/></svg>Photos</li>
+      <li><svg class="icon icon-lg" aria-hidden="true"><use href="../assets/icons.svg#wifi"/></svg>Wi‑Fi</li>
+      <li><svg class="icon icon-lg" aria-hidden="true"><use href="../assets/icons.svg#key"/></svg>Passwords</li>
+      <li><svg class="icon icon-lg" aria-hidden="true"><use href="../assets/icons.svg#shield"/></svg>Spotting scams</li>
+    </ul>
+
+    <section class="longer">
+      <h2>If it needs longer</h2>
+      <div class="longer-grid">
+        <div><b>$30</b><span>A phone or video call</span></div>
+        <div><b>$100</b><span>A home visit, first hour</span></div>
+      </div>
+      <p>Every price is at techhelp.now.</p>
+    </section>
+
+    <p class="sheet-foot"><span>Tech Help</span><span>hello@techhelp.now</span></p>
+  </article>
+</body>
+</html>
