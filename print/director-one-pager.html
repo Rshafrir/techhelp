@@ -3,64 +3,64 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TechHelp — for activity directors (print)</title>
+  <title>Tech Help — for activity directors (print)</title>
   <meta name="robots" content="noindex" />
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Lora:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Spectral:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="print.css" />
   <style>
-    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 0.5rem; }
-    .box { padding: 0.9rem 1rem; border: 1px solid var(--line); border-radius: 12px; }
-    .box h3 { margin-top: 0; }
-    @media print { .two { gap: 0.75rem; margin-top: 0.25rem; } .box { padding: 0.5rem 0.75rem; } .box ul.checks { margin-bottom: 0; } }
+    .sheet.note { padding: 0.5in 0.58in 0.48in; }
+    .sheet.note h1 { font-size: 3.15rem; max-width: 6.2in; }
+    .sheet.note .price-list { margin-top: 0.1in; }
+    .sheet.note .price-list li {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.4in;
+    }
+    .when { font-size: 1.15rem; margin-top: 0.15in; }
+    .blurb {
+      margin-top: 0.35in;
+      padding-top: 0.18in;
+      border-top: 1px solid var(--ink);
+      font-size: 0.92rem;
+    }
+    @media screen and (max-width: 760px) {
+      .sheet.note .price-list { grid-template-columns: 1fr; }
+      .sheet.note h1 { font-size: 2.5rem; }
+    }
+    @media print {
+      .sheet.note h1 { font-size: 2.6rem; }
+    }
   </style>
 </head>
 <body>
 
 <div class="toolbar"><button onclick="window.print()">Print</button>Leave this with the activity director after you talk. Fill the <span class="blank">blanks</span> first.</div>
 
-<article class="sheet">
-  <p class="logo">Tech<span>Help</span></p>
-  <p class="soft" style="margin-top:-0.25rem">Phone, tablet, and computer help · Joshua Tree &amp; Yucca Valley</p>
+<article class="sheet note">
+  <p class="running"><span>Tech Help</span><span>For the activity director</span></p>
 
-  <h1 style="margin-top:1.25rem">A free weekly Tech Table for your residents. No cost to the community.</h1>
+  <h1>A free Tech Table in the clubhouse.</h1>
 
-  <p>I’m Ron. For two hours a week, at the same day and time, I sit in your clubhouse or activity room. Residents bring a phone, tablet, or laptop. I help with texting, photos, FaceTime, Wi‑Fi, passwords, and scam calls. About 10 minutes per person is free. If someone needs more time, they book a home visit with me at a posted price, so it does not become work for your staff.</p>
+  <p>I’m Ron. I help residents with phones, Zoom and FaceTime, photos, Wi‑Fi, passwords, and spotting scams. The free session is the Tech Table: about 10 minutes in the clubhouse.</p>
 
-  <div class="two">
-    <div class="box">
-      <h3>What you provide</h3>
-      <ul class="checks">
-        <li>A table and two chairs where people already walk by</li>
-        <li>A line in the newsletter or on the bulletin board</li>
-        <li>Your vendor paperwork — I’ll complete whatever you use (insurance, background check, W‑9)</li>
-      </ul>
-    </div>
-    <div class="box">
-      <h3>What residents get</h3>
-      <ul class="checks">
-        <li>About ten minutes of free, patient help per visit</li>
-        <li>A written note of anything we changed</li>
-        <li>Scam awareness, one tip at a time</li>
-        <li>Family can sit in or listen by phone</li>
-      </ul>
-    </div>
-  </div>
+  <p>Residents book a home visit or a phone or video call with me directly, so it does not become work for your staff. Anything that can be finished in about 10 minutes at the table is free. Anything longer is paid. Venmo or Zelle in person. Card online through Stripe.</p>
 
-  <h2>When a resident needs more than ten minutes</h2>
-  <p>They book directly with me at posted rates, so it never lands on your team: home visit <strong>$100</strong> first hour, <strong>$70</strong> each hour after; phone or video help <strong>$30</strong> a call or <strong>$30/month</strong> for three. Adult children can book and pay remotely for a parent. When my season here ends, residents who want to keep going can, by phone or video.</p>
+  <ul class="price-list">
+    <li><b>Free</b><span>Tech Table, about 10 minutes in the clubhouse</span></li>
+    <li><b>$100</b><span>Home visit, first hour</span></li>
+    <li><b>$70</b><span>Each hour after that</span></li>
+    <li><b>$25 extra</b><span>Same-day home visit</span></li>
+    <li><b class="sentence">$40, not the full visit</b><span>Home visit that cannot be solved</span></li>
+    <li><b>$30</b><span>Phone or video call</span></li>
+    <li><b class="sentence">$30 a month for 3 calls. Extra calls are $30 each.</b><span>Monthly plan</span></li>
+  </ul>
 
-  <h2>Boundaries, so you know</h2>
-  <p>I don’t touch residents’ bank or money accounts, I don’t keep their passwords, and I don’t do caregiving, repairs or anything medical. I only see residents at the table or by appointment — never door to door. If anyone appears unable to consent to help, I stop and involve family.</p>
+  <p class="when"><span class="blank" contenteditable="true">Day</span> at <span class="blank" contenteditable="true">time</span>, in <span class="blank" contenteditable="true">room</span>.</p>
 
-  <h2>Proposed pilot</h2>
-  <p>Four weeks. <span class="blank" contenteditable="true">Day</span> from <span class="blank" contenteditable="true">time</span> to <span class="blank" contenteditable="true">time</span>, starting <span class="blank" contenteditable="true">date</span>, in <span class="blank" contenteditable="true">room</span>. If residents show up, we keep going.</p>
+  <p><strong>Ron · Tech Help</strong><br /><span class="blank" contenteditable="true">phone</span> · hello@techhelp.now · techhelp.now</p>
 
-  <div class="contact">
-    <strong>Ron · TechHelp</strong><br />
-    <span class="blank" contenteditable="true">phone</span> · hello@techhelp.now · techhelp.now
-  </div>
-
-  <p class="footer-line">Newsletter blurb you can paste: <em>Free Tech Table — drop in with your phone, tablet or laptop for quick, patient help (about 10 minutes) with texts, photos, FaceTime, Wi‑Fi and spotting scams. [Day] [time] · [Room]. techhelp.now</em></p>
+  <p class="blurb">Newsletter blurb you can paste: <em>Free Tech Table — drop in with your phone, tablet, or computer. About 10 minutes of help with phones, Zoom and FaceTime, photos, Wi‑Fi, passwords, and spotting scams. [Day] [time] · [Room]. techhelp.now</em></p>
 </article>
 
 </body>
