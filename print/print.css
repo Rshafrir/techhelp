@@ -1,13 +1,14 @@
 /* TechHelp print pieces. Letter paper. Open in a browser, edit the dotted blanks, print. */
 
 :root {
-  --ink: #23201b;
-  --soft: #55504a;
-  --terracotta: #c4573a;
-  --terracotta-deep: #a4452c;
-  --sage: #6b8f71;
-  --sand: #e6d7bf;
-  --line: rgba(35, 32, 27, 0.18);
+  --ink: #1b2830;
+  --soft: #314049;
+  --accent: #0e5c63;
+  --accent-deep: #084248;
+  --wash: #e7f3f3;
+  --line: rgba(27, 40, 48, 0.16);
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 @page { size: letter; margin: 0.5in; }
@@ -17,21 +18,31 @@
 html, body { margin: 0; padding: 0; }
 
 body {
-  font-family: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: var(--sans);
   color: var(--ink);
   font-size: 13.5pt;
   line-height: 1.45;
-  background: #ddd;
+  background: #d5e0e3;
 }
 
 .sheet {
   width: 8.5in;
   min-height: 11in;
   margin: 0.5in auto;
-  padding: 0.6in;
+  padding: 0.65in 0.7in;
   background: #fff;
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 10px 36px rgba(27, 40, 48, 0.14);
   position: relative;
+}
+
+.sheet::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: var(--accent);
 }
 
 .sheet.landscape { width: 11in; min-height: 8.5in; }
@@ -40,8 +51,8 @@ body {
   max-width: 8.5in;
   margin: 0.5in auto 0;
   padding: 0.75rem 1rem;
-  background: #fff8ec;
-  border: 1px solid var(--sand);
+  background: #fff;
+  border: 1px solid var(--line);
   border-radius: 10px;
   font-size: 0.95rem;
   color: var(--soft);
@@ -52,61 +63,70 @@ body {
   font: inherit;
   font-weight: 700;
   color: #fff;
-  background: var(--terracotta);
+  background: var(--accent);
   border: 0;
-  border-radius: 999px;
-  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  padding: 0.45rem 1rem;
   cursor: pointer;
 }
+.toolbar button:hover { background: var(--accent-deep); }
+.toolbar button:focus-visible { outline: 3px solid var(--accent-deep); outline-offset: 3px; }
 
 .blank {
   display: inline-block;
   min-width: 6ch;
   padding: 0 0.25em;
-  border-bottom: 2px dotted var(--terracotta);
-  color: var(--terracotta-deep);
+  border-bottom: 2px dotted var(--accent);
+  color: var(--accent-deep);
   font-weight: 700;
 }
-.blank:focus { outline: 2px solid var(--sage); border-radius: 3px; }
+.blank:focus { outline: 2px solid var(--accent); border-radius: 3px; }
 
 .logo {
-  font-family: Lora, Georgia, serif;
-  font-weight: 700;
+  font-family: var(--serif);
+  font-weight: 600;
   font-size: 2rem;
   letter-spacing: -0.02em;
-  margin: 0;
+  margin: 0.15rem 0 0;
 }
-.logo span { color: var(--terracotta); }
+.logo span { color: var(--accent); }
 
 h1, h2, h3 {
-  font-family: Lora, Georgia, serif;
+  font-family: var(--serif);
   font-weight: 600;
   line-height: 1.15;
   margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
 }
-h1 { font-size: 2.2rem; }
-h2 { font-size: 1.5rem; margin-top: 1.5rem; }
-h3 { font-size: 1.15rem; }
+h1 { font-size: 2.15rem; }
+h2 { font-size: 1.45rem; margin-top: 1.35rem; }
+h3 { font-size: 1.12rem; }
 
 p { margin: 0 0 0.75rem; }
 .soft { color: var(--soft); }
 .small { font-size: 0.95rem; }
 
 .rates { width: 100%; border-collapse: collapse; margin: 0.75rem 0 1rem; }
-.rates th, .rates td { text-align: left; padding: 0.55rem 0.25rem; border-bottom: 1px solid var(--line); vertical-align: top; }
-.rates th { font-weight: 700; width: 45%; }
-.rates td.price { font-family: Lora, Georgia, serif; font-size: 1.35rem; font-weight: 700; color: var(--terracotta-deep); white-space: nowrap; width: 20%; }
+.rates th, .rates td { text-align: left; padding: 0.55rem 0.2rem; border-bottom: 1px solid var(--line); vertical-align: baseline; }
+.rates th { font-weight: 700; width: 46%; }
+.rates td.price {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--accent-deep);
+  white-space: nowrap;
+  width: 18%;
+}
 
 ul.checks { list-style: none; padding: 0; margin: 0 0 0.75rem; }
-ul.checks li { position: relative; padding-left: 1.6rem; margin-bottom: 0.35rem; }
-ul.checks li::before { content: "✓"; position: absolute; left: 0; color: var(--sage); font-weight: 700; }
+ul.checks li { position: relative; padding-left: 1.5rem; margin-bottom: 0.4rem; }
+ul.checks li::before { content: ""; position: absolute; left: 0; top: 0.45em; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--accent); }
 
 .contact {
   margin-top: 1.25rem;
-  padding: 0.9rem 1.1rem;
-  background: #fbf6ee;
-  border: 1px solid var(--sand);
-  border-radius: 12px;
+  padding: 0.95rem 1.1rem;
+  background: var(--wash);
+  border-radius: 10px;
 }
 .contact strong { font-size: 1.1rem; }
 
@@ -115,22 +135,44 @@ ul.checks li::before { content: "✓"; position: absolute; left: 0; color: var(-
   font-size: 0.9rem;
   color: var(--soft);
   border-top: 1px solid var(--line);
-  padding-top: 0.5rem;
+  padding-top: 0.6rem;
+}
+
+@media screen and (max-width: 700px) {
+  body { font-size: 18px; background: #e7eef0; }
+  .toolbar, .sheet, .sheet.landscape {
+    width: auto;
+    max-width: none;
+    min-height: 0;
+    margin: 0.75rem;
+  }
+  .sheet, .sheet.landscape { padding: 1.35rem 1.1rem 1.5rem; }
+  .toolbar button { float: none; display: block; margin: 0 0 0.6rem; }
+  h1 { font-size: 1.8rem; }
+  .rates td.price { white-space: normal; }
 }
 
 @media print {
   html, body { background: #fff; height: auto; overflow: visible; }
   body { font-size: 11.5pt; line-height: 1.38; }
   .toolbar, .screen-only { display: none !important; }
-  .sheet, .sheet.landscape { margin: 0; box-shadow: none; width: auto; min-height: auto; padding: 0; font-size: 11.5pt; }
+  .sheet, .sheet.landscape {
+    margin: 0;
+    box-shadow: none;
+    width: auto;
+    min-height: auto;
+    padding: 0.15in 0 0;
+    font-size: 11.5pt;
+  }
+  .sheet::before { display: none; }
   .footer-line { font-size: 0.85rem; margin-top: 0.8rem; }
   .contact, .rates { break-inside: avoid; }
   .blank { border-bottom-color: transparent; color: var(--ink); }
-  h1 { font-size: 1.9rem; }
-  h2 { margin-top: 1rem; font-size: 1.35rem; }
-  p { margin-bottom: 0.55rem; }
-  .rates th, .rates td { padding: 0.45rem 0.25rem; }
-  .rates td.price { font-size: 1.25rem; }
-  .contact { margin-top: 0.9rem; }
-  .footer-line { margin-top: 1rem; }
+  h1 { font-size: 1.85rem; }
+  h2 { margin-top: 0.9rem; font-size: 1.3rem; }
+  p { margin-bottom: 0.5rem; }
+  .rates th, .rates td { padding: 0.4rem 0.2rem; }
+  .rates td.price { font-size: 1.2rem; }
+  .contact { margin-top: 0.85rem; }
+  .footer-line { margin-top: 0.9rem; }
 }
