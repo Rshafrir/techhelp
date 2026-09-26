@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tech Help · For activity directors</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="print.css">
+  <style>
+    @page { size: letter portrait; margin: 0; }
+
+    .d-head { margin-top: 0.34in; }
+    .d-head h1 { font-size: 34pt; line-height: 1.1; letter-spacing: -0.015em; }
+    .d-head p { max-width: 6.4in; margin-top: 0.12in; font-size: 13.5pt; color: var(--ink-2); }
+
+    .d-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.18in; margin-top: 0.3in; counter-reset: step; }
+    .d-steps li { counter-increment: step; padding: 0.2in; border: 2px solid var(--line); border-radius: 0.14in; font-size: 12pt; }
+    .d-steps li::before {
+      content: counter(step);
+      display: grid;
+      place-items: center;
+      width: 0.38in;
+      height: 0.38in;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 13pt;
+    }
+    .d-steps h2 { margin-top: 0.1in; font-size: 14pt; }
+    .d-steps p { margin-top: 0.04in; color: var(--ink-2); }
+
+    .d-cols { display: grid; grid-template-columns: 1fr 1.35fr; gap: 0.35in; margin-block: 0.32in 0.28in; }
+    .d-cols h2 { font-size: 16pt; }
+    .d-cols > div > p { margin-top: 0.08in; font-size: 12.5pt; }
+    .d-topics { margin-top: 0.14in; }
+    .d-topics li { display: flex; align-items: center; gap: 0.12in; padding-block: 0.045in; font-size: 13pt; font-weight: 700; }
+    .d-topics .icon { width: 0.3in; height: 0.3in; color: var(--accent); }
+    .d-cols .rows { margin-top: 0.14in; font-size: 12pt; }
+
+    .d-talk { margin-top: auto; padding: 0.25in 0.3in; border-radius: 0.14in; background: var(--tint); }
+    .d-talk h2 { font-size: 16pt; }
+    .d-talk p { margin-top: 0.06in; font-size: 14pt; }
+    .d-talk b { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <a class="wordmark" href="../">Tech Help</a>
+    <p>One page to leave with an activity director.</p>
+    <button class="btn btn-small" type="button" onclick="window.print()">Print</button>
+  </div>
+
+  <article class="sheet flow">
+    <p class="running"><span class="wordmark">Tech Help</span><span>For activity directors</span></p>
+
+    <div class="d-head">
+      <h1>A Tech Table in your clubhouse</h1>
+      <p>Residents bring a phone, tablet, or computer and a question, and Ron helps them sort it out on the spot. Anything that takes about 10 minutes at the table is free.</p>
+    </div>
+
+    <ol class="d-steps">
+      <li><h2>Email Ron</h2><p>Tell him a little about your clubhouse and the best way to reach you.</p></li>
+      <li><h2>Settle a time</h2><p>Ron writes back to arrange when the table will be there.</p></li>
+      <li><h2>Post the flyer</h2><p>Fill in the day and time, print it, and put it where residents will see it.</p></li>
+    </ol>
+
+    <div class="d-cols">
+      <div>
+        <h2>At the table</h2>
+        <p>About 10 minutes each, with the resident’s own device.</p>
+        <ul class="d-topics">
+          <li><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#phone"/></svg>Phones and tablets</li>
+          <li><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#video"/></svg>Zoom and FaceTime</li>
+          <li><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#photo"/></svg>Photos</li>
+          <li><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#wifi"/></svg>Wi‑Fi</li>
+          <li><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#key"/></svg>Passwords</li>
+          <li><svg class="icon" aria-hidden="true"><use href="../assets/icons.svg#shield"/></svg>Spotting scams</li>
+        </ul>
+      </div>
+      <div>
+        <h2>When it needs longer</h2>
+        <p>Ron offers a call or a home visit, which the resident sets up with him.</p>
+        <ul class="rows">
+          <li><span>Phone or video call</span> <b>$30</b></li>
+          <li><span>Monthly plan, 3 calls</span> <b>$30 a month</b></li>
+          <li><span>Home visit, first hour</span> <b>$100</b></li>
+          <li><span>Each hour after that</span> <b>$70</b></li>
+          <li><span>Same-day home visit</span> <b>$25 extra</b></li>
+          <li><span>Visit that can’t be solved</span> <b>$40, not the full visit</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="d-talk">
+      <h2>Talk to Ron about a Tech Table</h2>
+      <p><b>hello@techhelp.now</b> · techhelp.now/directors</p>
+    </div>
+
+  </article>
+</body>
+</html>
